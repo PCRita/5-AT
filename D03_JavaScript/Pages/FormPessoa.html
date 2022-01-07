@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="pt-pt">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Form Pessoa</title>
+    <script src="../Scripts/FormPessoa.js"></script>
+    <link href="../Styles/FormPessoa.css" rel="stylesheet" />
+</head>
+
+    <body onload="LoadForm();">
+
+        <form name="formPessoa">
+            <table>
+
+                <tr>
+                    <td>Nome <span class="required">* </span></td>
+                    <td>
+                        <input id="textName"
+                               type="text"
+                               maxlength="100"
+                               size="50"
+                               onblur="ValidateNome();">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Data de nascimento <span class="required">* </span></td>
+                    <td>
+                        <input id="inputDataNascimento"
+                               type="date"
+                               onblur="CalculateAge();">
+                        <span id="spanIdade" class="FontSizeXSmall"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>E-mail <span class="required">* </span></td>
+                    <td>
+                        <input id="textEmail"
+                               type="text"
+                               maxlength="100"
+                               size="50"
+                               onblur="ValidateEmail();">
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>Telefone <span class="required">*</span></td>
+                    <td>
+                        <input id="textPhone"
+                               type="text"
+                               maxlength="9"
+                               onblur="ValidateTelefone();">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>NIF <span class="required">*</span></td>
+                    <td>
+                        <input id="textNIF"
+                               type="text"
+                               maxlength="9"
+                               onblur="ValidateNIF();">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td>
+                        <button id="buttonValidate"
+                                type="button"
+                                value="Validar"
+                                onclick="ValidateForm(); ">
+                            Validar
+                        </button>
+                        <button id="buttonRestart"
+                                type="reset"
+                                value="Reiniciar">
+                            Reiniciar
+                        </button>
+                    </td>
+                </tr>
+
+            </table>
+            <br /><br />
+            <p id="pMessage"></p>
+        </form>
+
+    </body>
+
+</html>
